@@ -1,5 +1,5 @@
-import { OrbitControls, useGLTF, useTexture } from "@react-three/drei";
-import { forwardRef, useEffect } from "react";
+import { useGLTF, useTexture } from "@react-three/drei";
+import { useEffect } from "react";
 import * as THREE from "three";
 const colorAgnosticMaterialSet = new Set([
   "zFdeDaGNRwzccye",
@@ -124,7 +124,7 @@ const IPhoneModel = ({ item, ...props }) => {
         geometry={nodes.xXDHkMplTIDAXLN.geometry}
         material={materials.pIJKfZsazmcpEiU}
       >
-        <meshStandardMaterial roughness={1} map={texture} />
+        <meshStandardMaterial roughness={1} map={texture as any} />
       </mesh>
       <mesh
         castShadow

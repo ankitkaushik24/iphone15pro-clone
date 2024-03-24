@@ -55,6 +55,11 @@ const VideoCarousel = () => {
     }
   })();
 
+  const dotnavStyles = (duration: number) => ({
+    animationPlayState: playState === "paused" ? "paused" : "running",
+    "--animate-duration": `${duration}s`,
+  });
+
   return (
     <>
       <ul
@@ -107,11 +112,7 @@ const VideoCarousel = () => {
               }`}
             >
               <span
-                style={{
-                  animationPlayState:
-                    playState === "paused" ? "paused" : "running",
-                  "--animate-duration": `${slide.videoDuration}s`,
-                }}
+                style={dotnavStyles(slide.videoDuration)}
                 className="absolute h-full left-0 bg-white rounded-full dotnav"
               />
             </span>
