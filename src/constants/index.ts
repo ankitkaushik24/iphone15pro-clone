@@ -76,7 +76,7 @@ export const models = [
 export const sizes = [
   { label: '6.1"', value: "small" },
   { label: '6.7"', value: "large" },
-];
+] as const;
 
 export const footerLinks = [
   "Privacy Policy",

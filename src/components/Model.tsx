@@ -1,13 +1,12 @@
 import { View } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { models, sizes } from "../constants";
 import ModelView from "./ModelView";
 
 const rotationAmount = 2.5;
-const shiftX = 20;
 
 const Model = () => {
   const smallModelRef = useRef(new THREE.Group());

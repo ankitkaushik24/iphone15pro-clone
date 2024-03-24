@@ -1,10 +1,9 @@
 import { OrbitControls, View } from "@react-three/drei";
-import React, { Suspense } from "react";
-import Lights from "./Lights";
+import { Suspense } from "react";
 import IPhoneModel from "./IPhoneModel";
+import Lights from "./Lights";
 
 const rotationAmount = 2.5;
-const shiftX = 20;
 
 function ModelView({ item, modelRef, size, idx }) {
   return (
